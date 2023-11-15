@@ -8,7 +8,8 @@ namespace CarLotSimulator
         {
             //TODO
 
-            //Create a seperate class file called Car
+            //DONE__Create a seperate class file called Car DONE!
+
             //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
@@ -18,9 +19,63 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            var lot = new CarLot();
+            
+            
+            //Dot Notation
+            var generalLee = new ClassyCar();
+            generalLee.Make = "Dodge";
+            generalLee.Model = "Charger";
+            generalLee.Year = 1969;
+            generalLee.EngineNoise = "Vroooooooooooom!";
+            generalLee.HonkNoise = "Dixie";
+            generalLee.IsDriveable = true;
+
+            lot.Cars.Add(generalLee);
+
+
+            //Object Inititalizer Syntax
+            var batMobile = new ClassyCar()
+            {
+                Year = 1955,
+                Make = "Ford",
+                Model = "Lincoln",
+                EngineNoise = "rrrRrrrrrrRrrrrrrrrrRrrrrrrrrrrrrrrr!",
+                HonkNoise = "NaNaNaNaNaNaNaNa-BAT-MAAAAAN!!!",
+                IsDriveable = true
+
+            };
+
+            lot.Cars.Add(batMobile);
+
+            //List Parameters 
+            var timeMachine = new ClassyCar(1981, "DeLorean", "dmc-12", "Whhooooosssshhhhh!", "ERRRRRRR", true);
+
+            lot.Cars.Add(timeMachine);
+
+            generalLee.MakeEngineNoise(generalLee.EngineNoise);
+            batMobile.MakeEngineNoise(batMobile.EngineNoise);
+            timeMachine.MakeEngineNoise(timeMachine.EngineNoise);
+
+            Console.WriteLine();
+
+            generalLee.MakeHonkNoise(generalLee.HonkNoise);
+            batMobile.MakeHonkNoise(batMobile.HonkNoise);
+            timeMachine.MakeHonkNoise(timeMachine.HonkNoise);
+
+            Console.WriteLine();
+
+
+            foreach (var ClassyCar in lot.Cars)
+            {
+                Console.WriteLine($"Year: {ClassyCar.Year} Make: {ClassyCar.Make} Model: {ClassyCar.Model}");
+                 
+            }
+
+
             //*************BONUS*************//
 
-            // Set the properties utilizing the 3 different ways we learned about, one way for each car
+            //DONE Set the properties utilizing the 3 different ways we learned about, one way for each car
 
             //*************BONUS X 2*************//
 
