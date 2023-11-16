@@ -65,7 +65,9 @@ namespace CarLotSimulator
 
             Console.WriteLine();
 
+            Console.WriteLine($"Number of new cars: {CarLot.numberOfCars}");
 
+            
             foreach (var ClassyCar in lot.Cars)
             {
                 Console.WriteLine($"Year: {ClassyCar.Year} Make: {ClassyCar.Make} Model: {ClassyCar.Model}");

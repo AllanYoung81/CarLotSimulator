@@ -13,6 +13,8 @@ namespace CarLotSimulator
         //The methods should take one string parameter: the respective noise property
         public ClassyCar()
         {
+            CarLot.numberOfCars++;
+            //ClassName.StaricMember(increment by each new car added)
         }
 
             public ClassyCar(int year, 
